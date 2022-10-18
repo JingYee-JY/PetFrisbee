@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable =no">
+    <title>Pet Frisbee</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dokdo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="start">
+        <div class="game-title">
+            <img class="title" src="./img/title.png">
+        </div>
+        <img class="preview" src="./img/preview.png">
+        <button class="startButton">
+            <p class="words">Play game</p>
+        </button>
+    </div>
+    <div class="instruction hide">
+        <div class="back">
+            <div class="detail">
+                <h1 class="highlight">How to Play</h1>
+                <p>Tap on the Fisbee that is droping and avoid tapping on the other items.</p>
+            </div>
+        </div>
+        <button class="startGame">
+            <p class="words">Start</p>
+        </button>
+    </div>
+    <div class="game hide">
+        <div class="top">
+            <div class="goal">
+                <h1 class="score">1</h1>
+                <p>no. of catch</p>
+            </div>
+            <div class="chanceContainer">
+                <div class="chance">
+                    <img class="net" src="./img/chance.png">
+                    <img class="net" src="./img/chance.png">
+                    <img class="net" src="./img/chance.png">
+                </div>
+                <p>no. of chance</p>
+            </div>
+        </div>
+        <div class="game-container">
+            <img class="dog" src="./img/dog.png">
+        </div>
+    </div>
+    <div class="popUp hide">
+        <div class="pop">
+            <div class="information"></div>
+            <button class="next">Next</button>
+        </div>
+    </div>
+    <div class="final hide">
+        <img class="text">
+        <img class="show">
+        <button class="restart">
+            <p class="words">Play again</p>
+        </button>
+        <button class="home">
+            <p class="words">Back to home</p>
+        </button>
+    </div>
+
+    <!--<audio id="click" src="sound/click.wav"></audio>
+    <audio id="clap" src="./sound/clap.wav"></audio>
+    <audio id="lose" src="./sound/lose.wav"></audio>-->
+
+    <script src="script.js"></script>
+</body>
+</html>

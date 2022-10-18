@@ -1,0 +1,525 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #C0D8F0;
+    position: fixed;
+    overflow: hidden;
+}
+
+*{
+    font-family: "Dokdo";
+}
+
+.start,.instruction, .game, .howToPlay, .final{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: center;
+    min-height: 100vh;
+    align-items: center;
+}
+.start{
+    background-image: url("./img/startBackground.png");
+    background-size: 100% 100%;
+}
+.instruction{
+    justify-content: center;
+    background-image: url("./img/instructionPageBackground.png");
+    background-size: 100% 100%;
+}
+.game{
+    background-image: url("./img/gameBackground.png");
+    background-size: 100% 100%;
+}
+
+
+.final{
+    align-items: center;
+    background-image: url("./img/finalBackground.png");
+    background-size: 100% 100%;
+}
+
+.game-title{
+    margin-top: 10%;
+    align-self: center;
+    width: 80%;
+}
+
+.title{
+    width: 100%;
+    box-sizing: content-box;
+}
+
+.preview{
+    width: 100%;
+}
+
+.startButton, .startGame, .submit,.next, .restart,.readyButton, .home{
+    width: 100%;
+    position: relative;
+    align-self: center;
+    background-color: #ED683B;
+    border: 0px;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 15px 30px;
+    margin-bottom: 15px;
+    color: white;
+}
+.startButton{
+    margin-top: 15px;
+}
+
+.home{
+    background-color: #12BCC2;
+}
+
+.next, .readyButton{
+    font-weight: 500;
+    justify-content: center;
+}
+
+.startGame {
+    margin-top: 10px;
+}
+
+.startButton p, .startGame p, .submit p {
+    margin: 3%;
+    margin-right: 6%;
+}
+
+.words{
+    font-size: 30px;
+    width: 100%;
+    margin: 0 !important;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-weight: 500;
+}
+
+.back{
+    width: 70%;
+    height: auto;
+    padding: 35% 10%;
+    background-image: url("./img/instructionBackground.png");
+    background-size: 100% 100%;
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.back p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.hide{
+    display: none;
+    visibility: hidden;
+}
+
+.detail{
+    margin-top: 10px;
+    width: 90%;
+    position: relative;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail p {
+    font-size: 20px;
+    font-weight: 800;
+    margin: 0;
+    color: #992700;
+}
+
+.highlight{
+    font-size: 36px;
+    color:white;
+    margin: 0;
+}
+
+.object, .help{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.object img{
+    width: 100%;
+}
+
+.small{
+    width: 30% !important;
+}
+
+.help img{
+    width: 30%;
+    margin-bottom: 10%;
+}
+
+
+.game-container{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    z-index: 1;
+}
+
+.end-line{
+    width: 10%;
+    height: 15px;
+    position: absolute;
+    background-color: #474747;
+    bottom: -15px;
+}
+
+.dog{
+    width: 40%;
+    z-index: 5;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 15px;
+    left: 0px;
+}
+
+.top{
+    width: 90%;
+    background-image: url("./img/counterBackground.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+	position: relative;
+	display: flex;
+    padding: 2%;
+	border-radius: 20px;
+	font-size: 20px;
+    top: 5px;
+    z-index: 10;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.goal{
+    width: 37%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.goal p, .goal h1 {
+    margin: 0;
+}
+.goal img{
+    width: 70%;
+}
+.right{
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+}
+
+.targetLabel  {
+	color: white;
+	margin:0 !important;
+}
+
+.targetName{
+	color: white;
+	font-size: 14px;
+	top: 0%;
+	margin: 0%;
+}
+
+.scoreCount{
+    font-size: 30px;
+	align-self: center;
+	margin: 0 !important;
+}
+
+.chanceContainer{
+    width: 63%;
+    text-align: center;
+}
+
+.chanceContainer p{
+    margin: 0px;
+}
+
+.chance{
+    display: flex;
+    gap: 5px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.chance img{
+    width: 25%;
+}
+
+.frisbee,.bone,.ball, .cookie, .treats{
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    position: absolute;
+    display: flex;
+    background-size: 100% 100%;
+}
+
+.frisbee{
+    background-image: url("./img/frisbee.png");
+}
+
+.bone{
+    background-image: url("./img/bone.png");
+}
+
+.ball{
+    background-image: url("./img/ball.png");
+}
+
+.cookie{
+    background-image: url("./img/cookie.png");
+}
+
+.treats{
+    background-image: url("./img/treats.png");
+}
+
+.popUp, .ready{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    place-items: center;
+    justify-content: center;
+    gap: 5vh;
+    width: 100%;
+    height: 100vh;
+    z-index: 9;
+    top: 0;
+    background-color: transparent;
+}
+
+.ready{
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.number{
+    font-size: 30px;
+}
+
+.pop{
+    background-color: white;
+    padding: 20px;
+    position: relative;
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.information{
+    width: 90%;
+    position: relative;
+    height: 90%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.information img{
+    width: 60%;
+    height: auto;
+}
+
+.information h1{
+    font-weight: 900;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.information p{
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    justify-content: center;
+    text-align: center;
+}
+
+.title-final{
+	position: relative;
+    width: 100%;
+    padding: 5%;
+    box-sizing: border-box;
+}
+
+.icon{
+    width: 200px;
+	height: 110px;
+	margin-top: 10px;
+    color: white;
+}
+
+.icon p{
+    font-size: 40px;
+    font-weight: 1000;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.tick{
+	width: 20% !important;
+}
+
+.icon img{
+	width: 20%;
+	position: relative;
+	box-sizing: border-box;
+}
+
+.text{
+    position: relative;
+	width: 80%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    line-height: normal;
+    border-radius: 10px;
+    font-size: 17px;
+    padding: 15px;
+}
+
+.text p{
+    font-size: 30px;
+	margin: 10px auto;
+	color: white;
+}
+
+.show{
+    margin-bottom: -70px;
+    width: 100%;
+    height: auto;
+    align-self: center;
+    top: 2%;
+}
+
+  /*mobile*/
+@media screen and (max-width: 767px){
+    .startButton, .startGame, .restart, .home {
+    width: calc(100% - 70px);
+    justify-content: center;
+    align-items: center;
+    }
+    .next, .readyButton{
+        width: calc(100% - 100px);
+        padding: 3%;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/*ipad*/
+@media screen and (min-width: 768px) and (max-width: 1199px){
+    body{
+      width: 100%;
+    }
+    .startButton, .startGame,.restart, .home{
+        max-width: 500px;
+    }
+    .words{
+        font-size: 60px;
+    }
+    .highlight{
+        font-size: 60px;
+    }
+    .detail p{
+        font-size: 40px;
+        font-weight: 800;
+    }
+    .game-title{
+        margin-top: 20px;
+        width: 60%;
+    }
+    .preview{
+        width: 100%;
+    }
+    .frisbee, .bone,.treats,.ball,.cookie{
+        margin-left: 40px;
+        height: 200px;
+        width: 200px;
+    }
+    .chanceContainer p, .goal {
+        font-size: 40px;
+    }
+    .chance{
+        gap:20px;
+    }
+    .text{
+        width: 70%;
+    }
+    .show{
+        width: 100%;
+        margin-bottom: -140px;
+    }
+}
+
+
+/*desktop*/
+@media screen and (min-width:1200px){
+    body{
+      width: 100%;
+    }
+    .start, .instruction,.game,.final,.game-container{
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .startButton, .startGame,.restart, .home{
+        max-width: 250px;
+        padding: 10px 20px;
+    }
+    .game-title{
+        margin-top: 5px;
+        width: 55%;
+    }
+    .text{
+        padding: 0;
+        width: 70%;
+    }
+    .show{
+        width: 100%;
+    }
+    .back{
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width:767px){
+    .endTitle {
+      display: none;
+    }
+  }
