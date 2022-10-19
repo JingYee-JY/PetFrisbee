@@ -275,7 +275,7 @@ body{
     width: 25%;
 }
 
-.frisbee,.bone,.ball, .cookie, .treats{
+.frisbee,.bone,.ball, .cookie, .treats, .candy{
     width: 100px;
     height: 100px;
     border-radius: 5px;
@@ -302,6 +302,9 @@ body{
 
 .treats{
     background-image: url("./img/treats.png");
+}
+.candy{
+    background-image: url("./img/candy.png");
 }
 
 .popUp, .ready{
@@ -468,7 +471,7 @@ body{
     .preview{
         width: 100%;
     }
-    .frisbee, .bone,.treats,.ball,.cookie{
+    .frisbee, .bone,.treats,.ball,.cookie,.candy{
         margin-left: 40px;
         height: 200px;
         width: 200px;

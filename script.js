@@ -42,14 +42,16 @@ let right;
 let total;
 let chance;
 
-var objects = [ {name: "frisbee", image: "./img/frisbee.png", catchImage:"./img/fisbeeCatch.png"},
-                {name: "bone", image: "./img/bone.png", catchImage:"./img/boneCatch.png"},
-                {name: "frisbee", image: "./img/frisbee.png", catchImage:"./img/fisbeeCatch.png"},
-                {name: "ball", image: "./img/ball.png", catchImage:"./img/ballCatch.png"},
-                {name: "frisbee", image: "./img/frisbee.png", catchImage:"./img/fisbeeCatch.png"},
-                {name: "cookie", image: "./img/cookie.png", catchImage:"./img/cookieCatch.png"},
-                {name: "frisbee", image: "./img/frisbee.png", catchImage:"./img/fisbeeCatch.png"},
-                {name: "treats", image: "./img/treats.png", catchImage:"./img/treatsCatch.png"}]
+var objects = [ {name: "frisbee", catchImage:"./img/fisbeeCatch.png"},
+                {name: "bone", catchImage:"./img/boneCatch.png"},
+                {name: "frisbee", catchImage:"./img/fisbeeCatch.png"},
+                {name: "ball", catchImage:"./img/ballCatch.png"},
+                {name: "frisbee", catchImage:"./img/fisbeeCatch.png"},
+                {name: "cookie", catchImage:"./img/cookieCatch.png"},
+                {name: "frisbee", catchImage:"./img/fisbeeCatch.png"},
+                {name: "treats", catchImage:"./img/treatsCatch.png"},
+                {name: "frisbee", catchImage:"./img/frisbeeCatch.png"},
+                {name: "candy", catchImage:"./img/candyCatch.png"}]
 
 startButton.addEventListener("click", () => {
     //playClickSound()
@@ -167,6 +169,7 @@ function moveObject(){
     let ball = document.querySelectorAll(".ball");
     let cookie = document.querySelectorAll(".cookie");
     let treats = document.querySelectorAll(".treats");
+    let candy = document.querySelectorAll(".candy");
 
     function spawnItem(item){
         if(item.y >= -150 && item.y < -147){
@@ -272,6 +275,9 @@ function moveObject(){
     treats.forEach(function(item){
         spawnItem(item);
     })
+    candy.forEach(function(item){
+        spawnItem(item);
+    })
 }
 
 function updateScore(){
@@ -286,6 +292,7 @@ function remove(){
     let ball = document.querySelectorAll(".ball");
     let cookie = document.querySelectorAll(".cookie");
     let treats = document.querySelectorAll(".treats");
+    let candy = document.querySelectorAll(".candy");
     
     frisbee.forEach(function(item){
         gameContainer.removeChild(item);
@@ -300,6 +307,9 @@ function remove(){
         gameContainer.removeChild(item);
     })
     treats.forEach(function(item){
+        gameContainer.removeChild(item);
+    })
+    candy.forEach(function(item){
         gameContainer.removeChild(item);
     })
 }
