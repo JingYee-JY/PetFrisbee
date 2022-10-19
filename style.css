@@ -21,6 +21,7 @@ body{
     text-align: center;
     min-height: 100vh;
     align-items: center;
+    background-position: center bottom;
 }
 .start{
     background-image: url("./img/startBackground.png");
@@ -111,7 +112,7 @@ body{
     background-image: url("./img/instructionBackground.png");
     background-size: 100% 100%;
     display: flex;
-    margin-top: 100px;
+    margin-top: 80px;
     justify-content: center;
     align-items: center;
 }
