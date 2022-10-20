@@ -21,9 +21,10 @@ body{
     text-align: center;
     min-height: 100vh;
     align-items: center;
-    background-position: center bottom;
 }
 .start{
+    justify-content: flex-end;
+    position: relative;
     background-image: url("./img/startBackground.png");
     background-size: 100% 100%;
 }
@@ -57,6 +58,11 @@ body{
 
 .preview{
     width: 100%;
+    height: 370px;
+    background-image: url("./img/preview.png");
+    background-size: 160% auto;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .startButton, .startGame, .submit,.next, .restart,.readyButton, .home{
@@ -105,6 +111,14 @@ body{
     font-weight: 500;
 }
 
+.backButton{
+    position: absolute;
+    width: 15%;
+    height: auto;
+    top: 10px;
+    left: 10px;
+}
+
 .back{
     width: 70%;
     height: auto;
@@ -112,7 +126,7 @@ body{
     background-image: url("./img/instructionBackground.png");
     background-size: 100% 100%;
     display: flex;
-    margin-top: 80px;
+    margin-top: 100px;
     justify-content: center;
     align-items: center;
 }
@@ -470,7 +484,8 @@ body{
         width: 60%;
     }
     .preview{
-        width: 100%;
+        height: 750px;
+        background-size: 130% auto;
     }
     .frisbee, .bone,.treats,.ball,.cookie,.candy{
         margin-left: 40px;
@@ -519,6 +534,10 @@ body{
     }
     .back{
         margin-top: 40px;
+    }
+    .preview{
+        height: 310px;
+        background-size: 130% auto;
     }
 }
 
