@@ -23,7 +23,7 @@ body{
     align-items: center;
 }
 .start{
-    justify-content: flex-end;
+    justify-content: center;
     position: relative;
     background-image: url("./img/startBackground.png");
     background-size: 100% 100%;
