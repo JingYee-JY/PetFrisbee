@@ -36,7 +36,7 @@
                 <p>Catch</p>
                 <h1 class="score">1</h1>
                 <p>frisbees</p>
-                <p>to win</p>
+                <p class="higher">to win</p>
             </div>
             <div class="chanceContainer">
                 <div class="chance">
@@ -76,5 +76,13 @@
     <audio id="lose" src="./sound/lose.wav"></audio>-->
 
     <script src="script.js"></script>
+    <script>
+        const appHeight = () => {
+     const doc = document.documentElement
+     doc.style.setProperty('--app-height', `${window.innerHeight}px`)
+        }
+        window.addEventListener('resize', appHeight)
+        appHeight()
+     </script>
 </body>
 </html>

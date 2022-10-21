@@ -8,13 +8,18 @@ body{
     overflow: hidden;
 }
 
+:root {
+    --app-height: 100%;
+}
+
 *{
     font-family: "Dokdo";
 }
 
 .start,.instruction, .game, .howToPlay, .final{
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    height: var(--app-height);
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -45,10 +50,10 @@ body{
 }
 
 .game-title{
-    margin-top: 20%;
+    margin-top: 70px;
     align-self: center;
     width: 80%;
-    margin-bottom: 80%;
+    margin-bottom: 300px;
 }
 
 .title{
@@ -260,8 +265,9 @@ body{
     font-size: 60px;
     margin: -20px 0px;
 }
-.goal img{
-    width: 70%;
+
+.higher{
+    margin-top: -10px !important;
 }
 .right{
 	display: flex;
@@ -465,6 +471,7 @@ body{
 .additional p{
     font-family: 'Open Sans', sans-serif !important;
     margin: 0;
+    font-weight: 700;
 }
 
   /*mobile*/
