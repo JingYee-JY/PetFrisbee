@@ -13,10 +13,10 @@ const next = document.querySelector(".next");
 const final = document.querySelector(".final");
 const finalTitle = document.querySelector(".title-final");
 const text = document.querySelector(".text");
-const show = document.querySelector(".show");
 const more = document.querySelector(".More");
 const restart = document.querySelector(".restart");
 const ready = document.querySelector(".ready");
+const additional = document.querySelector(".additional");
 const readyButton = document.querySelector(".readyButton");
 const showScore = document.querySelector(".score");
 const homeButton = document.querySelector(".home")
@@ -91,12 +91,13 @@ next.addEventListener("click", () => {
     //let delay = setTimeout(() => {
         final.classList.add("hide")
         start.classList.remove("hide")
+        additional.classList.add("hidden")
     //}, 200);
   })
   
   function gameDetail(){
     game.classList.remove("hide")
-    score = Math.floor(Math.random() * 5) + 1;
+    score = Math.floor(Math.random() * 6) + 5;
     chance = 3
     answer = "frisbee"
     catching = false
@@ -220,6 +221,9 @@ function moveObject(){
                 if(item.classList.contains(`treats`)){
                     dog.src = "./img/treatsCatch.png"
                 }
+                if(item.classList.contains(`candy`)){
+                    dog.src = "./img/candyCatch.png"
+                }
                 gameContainer.removeChild(item);
                 let delay = setTimeout(()=>{
                     let net = document.querySelector(".net")
@@ -237,7 +241,7 @@ function moveObject(){
                     //lose.play()
                     game.classList.add("hide")
                     final.classList.remove("hide")
-                    show.src = "./img/lose.png"
+                    final.style.backgroundImage = "url('./img/loseBackground.png')"
                     text.src = "./img/loseText.png"
                     clearInterval(scoreinterval);
                 }
@@ -250,7 +254,8 @@ function moveObject(){
                         remove()
                         game.classList.add("hide")
                         final.classList.remove("hide")
-                        show.src = "./img/win.png"
+                        additional.classList.remove("hidden")
+                        final.style.backgroundImage = "url('./img/winBackground.png')"
                         text.src = "./img/winText.png"
                         clearInterval(scoreinterval);
                       }, 200);

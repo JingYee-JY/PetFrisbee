@@ -23,7 +23,7 @@ body{
     align-items: center;
 }
 .start{
-    justify-content: center;
+    justify-content: flex-start;
     position: relative;
     background-image: url("./img/startBackground.png");
     background-size: 100% 100%;
@@ -41,14 +41,14 @@ body{
 
 .final{
     align-items: center;
-    background-image: url("./img/finalBackground.png");
     background-size: 100% 100%;
 }
 
 .game-title{
-    margin-top: 10%;
+    margin-top: 20%;
     align-self: center;
     width: 80%;
+    margin-bottom: 80%;
 }
 
 .title{
@@ -126,7 +126,7 @@ body{
     background-image: url("./img/instructionBackground.png");
     background-size: 100% 100%;
     display: flex;
-    margin-top: 100px;
+    margin-top: 65px;
     justify-content: center;
     align-items: center;
 }
@@ -137,6 +137,10 @@ body{
 
 .hide{
     display: none;
+    visibility: hidden;
+}
+
+.hidden{
     visibility: hidden;
 }
 
@@ -152,10 +156,10 @@ body{
 }
 
 .detail p {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 800;
     margin: 0;
-    color: #992700;
+    color: #01494B;
 }
 
 .highlight{
@@ -240,8 +244,21 @@ body{
     text-align: center;
 }
 
-.goal p, .goal h1 {
+.chanceContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.goal p,.chanceContainer p{
     margin: 0;
+    font-size: 18px;
+    color: #561C0C;
+}
+.goal h1{
+    color: white;
+    margin: 0;
+    font-size: 60px;
+    margin: -20px 0px;
 }
 .goal img{
     width: 70%;
@@ -282,12 +299,14 @@ body{
 .chance{
     display: flex;
     gap: 5px;
+
     flex-direction: row;
     justify-content: center;
 }
 
 .chance img{
     width: 25%;
+    padding: 2% 0%;
 }
 
 .frisbee,.bone,.ball, .cookie, .treats, .candy{
@@ -438,12 +457,14 @@ body{
 	color: white;
 }
 
-.show{
-    margin-bottom: -70px;
-    width: 100%;
-    height: auto;
-    align-self: center;
-    top: 2%;
+.additional{
+    color: #01494B;
+    margin-bottom: 240px;
+}
+
+.additional p{
+    font-family: 'Open Sans', sans-serif !important;
+    margin: 0;
 }
 
   /*mobile*/
@@ -480,7 +501,8 @@ body{
         font-weight: 800;
     }
     .game-title{
-        margin-top: 20px;
+        margin-top: 20%;
+        margin-bottom: 70%;
         width: 60%;
     }
     .preview{
@@ -501,9 +523,9 @@ body{
     .text{
         width: 70%;
     }
-    .show{
-        width: 100%;
-        margin-bottom: -140px;
+    .additional{
+        font-size: 30px;
+        margin-bottom: 450px;
     }
 }
 
@@ -522,8 +544,9 @@ body{
         padding: 10px 20px;
     }
     .game-title{
-        margin-top: 5px;
         width: 55%;
+        margin-top: 20%;
+        margin-bottom: 70%;
     }
     .text{
         padding: 0;
