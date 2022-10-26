@@ -132,6 +132,7 @@ function spawnObject(){
         yDistance = 150
         player.step = 3
         player.right = 9
+        bottom = 100
     }
     if(border.width > 500){
         object.y = -350
@@ -140,6 +141,7 @@ function spawnObject(){
         player.step = 5
         player.right = 11
         yDistance = 300
+        bottom = 100
     }
     if(first == true){
         object.y = -150;
@@ -192,21 +194,16 @@ function moveObject(){
                 item.style.top = item.y +"px";
                 return
             }
-
-            if(item.y > border.height - 200){
-                item.classList.remove("move")
-                catching = false
-                return
-            }
             item.x = item.x - player.right;
             item.style.left = item.x +"px";
             item.y = item.y + player.right;
             item.style.top = item.y +"px";
         }
         if(item.y > border.height){
+            catching = false
             gameContainer.removeChild(item);
         }
-        if(item.y > (border.height - yDistance) && item.y < border.height && 
+        if(item.y > (border.height - yDistance) && item.y < (border.height - bottom) && 
         item.x > 0 && item.x < 100){
             catching = true
             if(item.classList.contains(`${answer}`)){
