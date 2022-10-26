@@ -470,6 +470,10 @@ body{
     margin-bottom: 240px;
 }
 
+.stop{
+    opacity: 60%;
+}
+
 .additional p{
     font-family: 'Open Sans', sans-serif !important;
     margin: 0;
@@ -523,7 +527,7 @@ body{
         height: 200px;
         width: 200px;
     }
-    .chanceContainer p, .goal {
+    .chanceContainer p, .goal p{
         font-size: 40px;
     }
     .chance{
@@ -535,6 +539,10 @@ body{
     .additional{
         font-size: 30px;
         margin-bottom: 450px;
+    }
+    .goal h1{
+        font-size: 100px;
+        margin: -40px 0px;
     }
 }
 

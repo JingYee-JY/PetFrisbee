@@ -152,15 +152,16 @@ function spawnObject(){
     object.style.left = object.x + 'px';
     gameContainer.appendChild(object);
     object.addEventListener("click", () => {
+        console.log(catching)
         //playClickSound()
-        if(catching == false){
+        if(catching == false && !object.classList.contains("stop")){
             object.classList.add("move")
             catching = true
         }
     })
     object.addEventListener("touchstart", () => {
         //playClickSound()
-        if(catching == false){
+        if(catching == false && !object.classList.contains("stop")){
             object.classList.add("move")
             catching = true
         }
@@ -185,6 +186,9 @@ function moveObject(){
         if(item.y >= -150 && item.y < -147){
             spawnObject();
         }
+        if(item.y > (border.height - (border.height / 10 * 3)) && !item.classList.contains("move")){
+            item.classList.add("stop")
+        }
         if(item.classList.contains("move")){
             if(item.x < 35){
                 if(item.y > border.height - 300){
@@ -199,8 +203,10 @@ function moveObject(){
             item.y = item.y + player.right;
             item.style.top = item.y +"px";
         }
-        if(item.y > border.height){
+        if(item.y > (border.height - bottom)){
             catching = false
+        }
+        if(item.y > border.height){
             gameContainer.removeChild(item);
         }
         if(item.y > (border.height - yDistance) && item.y < (border.height - bottom) && 
