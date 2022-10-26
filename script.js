@@ -156,6 +156,13 @@ function spawnObject(){
             catching = true
         }
     })
+    object.addEventListener("touchstart", () => {
+        //playClickSound()
+        if(catching == false){
+            object.classList.add("move")
+            catching = true
+        }
+    })
 }
 
 function fallingObject(){

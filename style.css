@@ -169,6 +169,7 @@ body{
 
 .highlight{
     font-size: 36px;
+    font-weight: 400;
     color:white;
     margin: 0;
 }
@@ -465,6 +466,7 @@ body{
 
 .additional{
     color: #01494B;
+    font-size: 15px;
     margin-bottom: 240px;
 }
 
