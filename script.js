@@ -191,7 +191,7 @@ function moveObject(){
         }
         if(item.classList.contains("move")){
             if(item.x < 100){
-                if(item.y > border.height - 300){
+                if(item.y > border.height - yDistance){
                     item.classList.remove("move")
                 }
                 item.y = item.y + player.right;
