@@ -154,14 +154,14 @@ function spawnObject(){
     object.addEventListener("click", () => {
         console.log(catching)
         //playClickSound()
-        if(catching == false && !object.classList.contains("stop")){
+        if(catching == false){
             object.classList.add("move")
             catching = true
         }
     })
     object.addEventListener("touchstart", () => {
         //playClickSound()
-        if(catching == false && !object.classList.contains("stop")){
+        if(catching == false){
             object.classList.add("move")
             catching = true
         }
@@ -186,17 +186,26 @@ function moveObject(){
         if(item.y >= -150 && item.y < -147){
             spawnObject();
         }
-        if(item.y > (border.height - (border.height / 10 * 3)) && !item.classList.contains("move")){
+        if(item.y > (border.height - (border.height / 10 * 4))){
             item.classList.add("stop")
         }
         if(item.classList.contains("move")){
-            if(item.x < 35){
+            if(item.x < 100){
                 if(item.y > border.height - 300){
                     item.classList.remove("move")
                 }
                 item.y = item.y + player.right;
                 item.style.top = item.y +"px";
                 return
+            }
+            if(item.classList.contains("stop")){
+                item.y = item.y + player.right;
+                item.style.top = item.y +"px";
+                if(item.y > (border.height - yDistance - 50)){
+                    item.y = item.y - player.right;
+                    item.style.top = item.y +"px";
+                    return
+                }
             }
             item.x = item.x - player.right;
             item.style.left = item.x +"px";

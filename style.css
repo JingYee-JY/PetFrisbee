@@ -131,7 +131,7 @@ body{
     background-image: url("./img/instructionBackground.png");
     background-size: 100% 100%;
     display: flex;
-    margin-top: 65px;
+    margin-top: 45px;
     justify-content: center;
     align-items: center;
 }
@@ -150,7 +150,7 @@ body{
 }
 
 .detail{
-    margin-top: 10px;
+    margin-top: 35px;
     width: 90%;
     position: relative;
     display: flex;
@@ -172,6 +172,7 @@ body{
     font-weight: 400;
     color:white;
     margin: 0;
+    margin-bottom: -10px;
 }
 
 .object, .help{
@@ -467,12 +468,13 @@ body{
 .additional{
     color: #01494B;
     font-size: 15px;
+    margin-top: -30px;
     margin-bottom: 240px;
 }
 
-.stop{
+/*.stop{
     opacity: 60%;
-}
+}*/
 
 .additional p{
     font-family: 'Open Sans', sans-serif !important;
