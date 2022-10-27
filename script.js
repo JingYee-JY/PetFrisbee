@@ -186,7 +186,7 @@ function moveObject(){
         if(item.y >= -150 && item.y < -147){
             spawnObject();
         }
-        if(item.y > (border.height - (border.height / 10 * 4))){
+        if(item.y > (border.height - (border.height / 10 * 3))){
             item.classList.add("stop")
         }
         if(item.classList.contains("move")){
