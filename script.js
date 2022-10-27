@@ -154,14 +154,14 @@ function spawnObject(){
     object.addEventListener("click", () => {
         console.log(catching)
         //playClickSound()
-        if(catching == false){
+        if(catching == false && !object.classList.contains("impossible")){
             object.classList.add("move")
             catching = true
         }
     })
     object.addEventListener("touchstart", () => {
         //playClickSound()
-        if(catching == false){
+        if(catching == false && !object.classList.contains("impossible")){
             object.classList.add("move")
             catching = true
         }
@@ -189,9 +189,12 @@ function moveObject(){
         if(item.y > (border.height - (border.height / 10 * 3))){
             item.classList.add("stop")
         }
+        if(item.y > (border.height - bottom - 25)){
+            item.classList.add("impossible")
+        }
         if(item.classList.contains("move")){
             catching = true
-            if(item.x < 100){
+            if(item.x < 90){
                 if(item.y > border.height - yDistance){
                     item.classList.remove("move")
                 }
@@ -202,9 +205,8 @@ function moveObject(){
             if(item.classList.contains("stop")){
                 item.x = item.x - player.right;
                 item.style.left = item.x +"px";
-                if(item.y > (border.height - yDistance - 150)){
-                    console.log("testx")
-                    item.y = item.y - player.right;
+                if(item.y > (border.height - yDistance) && item.y < (border.height - bottom)){
+                    item.y = item.y;
                     item.style.top = item.y +"px";
                     return
                 }

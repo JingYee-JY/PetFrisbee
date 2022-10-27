@@ -43,6 +43,9 @@ body{
     background-size: 100% 100%;
 }
 
+.impossible{
+    opacity: 60%;
+}
 
 .final{
     align-items: center;
@@ -150,8 +153,8 @@ body{
 }
 
 .detail{
-    margin-top: 35px;
-    width: 90%;
+    margin-top: 20px;
+    width: 95%;
     position: relative;
     display: flex;
     text-align: center;
@@ -161,7 +164,7 @@ body{
 }
 
 .detail p {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 800;
     margin: 0;
     color: #01494B;
