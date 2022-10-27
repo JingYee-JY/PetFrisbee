@@ -201,7 +201,7 @@ function moveObject(){
             if(item.classList.contains("stop")){
                 item.x = item.x - player.right;
                 item.style.left = item.x +"px";
-                if(item.y > (border.height - yDistance - 100)){
+                if(item.y > (border.height - yDistance - 150)){
                     console.log("testx")
                     item.y = item.y - player.right;
                     item.style.top = item.y +"px";
