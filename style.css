@@ -469,7 +469,7 @@ body{
 .additional{
     color: #01494B;
     font-size: 15px;
-    margin-top: -30px;
+    margin-top: -20px;
     margin-bottom: 240px;
 }
 
@@ -542,6 +542,7 @@ body{
     .additional{
         font-size: 30px;
         margin-bottom: 450px;
+        margin-top: -50px;
     }
     .goal h1{
         font-size: 100px;
@@ -583,9 +584,3 @@ body{
         background-size: 130% auto;
     }
 }
-
-@media screen and (max-width:767px){
-    .endTitle {
-      display: none;
-    }
-  }
