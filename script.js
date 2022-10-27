@@ -190,6 +190,7 @@ function moveObject(){
             item.classList.add("stop")
         }
         if(item.classList.contains("move")){
+            catching = true
             if(item.x < 100){
                 if(item.y > border.height - yDistance){
                     item.classList.remove("move")
