@@ -199,9 +199,10 @@ function moveObject(){
                 return
             }
             if(item.classList.contains("stop")){
-                item.y = item.y + player.right;
-                item.style.top = item.y +"px";
-                if(item.y > (border.height - yDistance - 50)){
+                item.x = item.x - player.right;
+                item.style.left = item.x +"px";
+                if(item.y > (border.height - yDistance - 100)){
+                    console.log("testx")
                     item.y = item.y - player.right;
                     item.style.top = item.y +"px";
                     return
@@ -212,10 +213,8 @@ function moveObject(){
             item.y = item.y + player.right;
             item.style.top = item.y +"px";
         }
-        if(item.y > (border.height - bottom)){
-            catching = false
-        }
         if(item.y > border.height){
+            catching = false
             gameContainer.removeChild(item);
         }
         if(item.y > (border.height - yDistance) && item.y < (border.height - bottom) && 
