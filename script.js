@@ -158,12 +158,18 @@ function spawnObject(){
             object.classList.add("move")
             catching = true
         }
+        else{
+            return
+        }
     })
     object.addEventListener("touchstart", () => {
         //playClickSound()
         if(catching == false && !object.classList.contains("impossible")){
             object.classList.add("move")
             catching = true
+        }
+        else{
+            return
         }
     })
 }
